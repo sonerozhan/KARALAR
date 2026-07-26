@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öz Karalar & CK Global | Uluslararası Lojistik ve Taşımacılık</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0A192F;
+            --accent: #F97316; /* Dikkat çekici turuncu */
+            --accent-hover: #EA580C;
+            --light: #F8FAFC;
+            --dark: #1E293B;
+            --gray: #64748B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 5%;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .top-bar-info a {
+            color: var(--white);
+            transition: 0.3s;
+        }
+
+        .top-bar-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo span {
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--dark);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .btn-quote {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-quote:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content max-width {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* Features / Stats */
+        .stats {
+            background-color: var(--white);
+            padding: 40px 5%;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-bottom-color: var(--accent);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* About Brands */
+        .about {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .brand-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .brand-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            border-left: 3px solid var(--accent);
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 5%;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .contact-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .contact-card i {
+            font-size: 28px;
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .contact-card h4 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .contact-card p, .contact-card a {
+            color: var(--gray);
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #071120;
+            color: #94a3b8;
+            padding: 30px 5%;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer span {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Responsive Navbar Menu Toggle for Mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        @media(max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fa-solid fa-phone"></i> Berat Karalar: <a href="tel:05318356007">0531 835 60 07</a></span>
+            <span><i class="fa-solid fa-phone"></i> İbrahim Karalar: <a href="tel:05385142075">0538 514 20 75</a></span>
+        </div>
+        <div>
+            <span><i class="fa-solid fa-globe"></i> Öz Karalar & CK Global Lojistik</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            ÖZ KARALAR & CK GLOBAL
+            <span>Uluslararası Lojistik Ağı</span>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                <li><a href="#kurumsal">Kurumsal</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="tel:05318356007" class="btn-quote">Hemen Teklif Al</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Güvenli Taşımacılıkta <span>Küresel Gücünüz</span></h1>
+            <p>Öz Karalar ve CK Global güçlerini birleştirdi. Yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
+            <div class="hero-buttons">
+                <a href="tel:05318356007" class="btn-primary"><i class="fa-solid fa-phone"></i> Berat Karalar'ı Ara</a>
+                <a href="tel:05385142075" class="btn-secondary"><i class="fa-solid fa-phone"></i> İbrahim Karalar'ı Ara</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="stat-item">
+            <h3>%100</h3>
+            <p>Müşteri Memnuniyeti</p>
+        </div>
+        <div class="stat-item">
+            <h3>7/24</h3>
+            <p>Kesintisiz Destek</p>
+        </div>
+        <div class="stat-item">
+            <h3>Güven</h3>
+            <p>Zamanında Teslimat</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" id="hizmetler">
+        <h2 class="section-title">Lojistik Çözümlerimiz</h2>
+        <p class="section-desc">İhtiyacınıza uygun profesyonel taşımacılık hizmetleri sunuyoruz.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Karayolu Taşımacılığı</h3>
+                <p>Geniş araç filomuzla yurtiçi ve uluslararası karayolu yük taşımacılığında güvenilir ve hızlı çözümler.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-warehouse"></i>
+                <h3>Depolama & Antrepo</h3>
+                <p>Yüklerinizin güvenle saklanabileceği, modern depolama ve stok yönetim sistemleri.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-boxes-packing"></i>
+                <h3>Parsiyel Taşımacılık</h3>
+                <p>Komple araç maliyeti oluşturmadan, yüklerinizi ekonomik ve planlı bir şekilde hedef noktaya ulaştırma.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Brands Section -->
+    <section class="about" id="kurumsal">
+        <div class="about-text">
+            <h2>İki Güçlü Marka, Tek Hedef: Kusursuz Hizmet</h2>
+            <p><strong>Öz Karalar</strong> ve <strong>CK Global</strong> ortaklığıyla lojistik sektöründe standartları yeniden belirliyoruz. Yılların getirdiği sektör tecrübemiz ve güçlü yönetim kadromuzla operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
+            <p>Berat Karalar ve İbrahim Karalar liderliğinde, iş süreçlerinizde her zaman yanınızdayız.</p>
+            
+            <div class="brand-badges">
+                <div class="brand-badge">Öz Karalar Lojistik</div>
+                <div class="brand-badge">CK Global</div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Lojistik Filosu">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="iletisim">
+        <h2 class="section-title">İletişim Bilgileri</h2>
+        <p class="section-desc">Bizimle hemen iletişime geçebilir, yükleriniz için en uygun teklifi alabilirsiniz.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h4>Berat Karalar</h4>
+                    <p>Yönetici / Operasyon</p>
+                    <a href="tel:05318356007">0531 835 60 07</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h4>İbrahim Karalar</h4>
+                    <p>Yönetici / Operasyon</p>
+                    <a href="tel:05385142075">0538 514 20 75</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div>
+                    <h4>Merkez Ofis</h4>
+                    <p>Türkiye / Global Lojistik Merkezi</p>
+                    <a href="#">Haritada Gör</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <span>Öz Karalar & CK Global Lojistik</span>. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
