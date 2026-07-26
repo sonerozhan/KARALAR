@@ -28,7 +28,7 @@
         body {
             background-color: var(--light);
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
@@ -45,18 +45,18 @@
         .top-bar {
             background-color: var(--primary);
             color: var(--white);
-            padding: 8px 4%;
-            font-size: 13px;
+            padding: 6px 4%;
+            font-size: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .top-bar-info {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
@@ -79,18 +79,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 4%;
+            padding: 8px 4%;
         }
 
         .logo-img {
-            height: 42px;
+            height: 38px;
             width: auto;
             object-fit: contain;
         }
 
         nav ul {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             align-items: center;
         }
 
@@ -98,7 +98,7 @@
             font-weight: 600;
             color: var(--dark);
             transition: 0.3s;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         nav a:hover {
@@ -108,7 +108,7 @@
         .btn-quote {
             background-color: var(--accent);
             color: var(--white);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 5px;
             font-weight: 600;
             transition: 0.3s;
@@ -120,7 +120,7 @@
 
         /* Hero Slider Section */
         .hero {
-            height: 80vh;
+            height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -150,7 +150,7 @@
             background-position: center center;
             background-repeat: no-repeat;
             opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
         }
 
         .slide.active {
@@ -163,18 +163,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(10, 25, 47, 0.78), rgba(10, 25, 47, 0.78));
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8));
             z-index: -1;
         }
 
         .hero-content {
             z-index: 1;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 36px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             line-height: 1.2;
         }
 
@@ -183,26 +184,23 @@
         }
 
         .hero p {
-            font-size: 16px;
-            margin-bottom: 25px;
+            font-size: 15px;
+            margin-bottom: 20px;
             color: #cbd5e1;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn-primary, .btn-whatsapp {
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             transition: 0.3s;
             display: inline-flex;
             align-items: center;
@@ -230,85 +228,85 @@
         /* Stats */
         .stats {
             background-color: var(--white);
-            padding: 30px 4%;
-            margin-top: -40px;
+            padding: 25px 4%;
+            margin-top: -35px;
             position: relative;
             z-index: 10;
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-            border-radius: 12px;
+            border-radius: 10px;
             width: 92%;
             margin-left: auto;
             margin-right: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
             text-align: center;
         }
 
         .stat-item h3 {
-            font-size: 28px;
+            font-size: 26px;
             color: var(--accent);
             font-weight: 800;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .stat-item p {
             color: var(--gray);
             font-weight: 500;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         /* Services */
         .services {
-            padding: 60px 4%;
+            padding: 50px 4%;
             text-align: center;
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .section-desc {
             color: var(--gray);
-            margin-bottom: 40px;
-            font-size: 15px;
+            margin-bottom: 30px;
+            font-size: 14px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
             text-align: left;
         }
 
         .service-card {
             background-color: var(--white);
-            padding: 25px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
             transition: 0.3s;
-            border-bottom: 4px solid transparent;
+            border-bottom: 3px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
             border-bottom-color: var(--accent);
         }
 
         .service-card i {
-            font-size: 36px;
+            font-size: 32px;
             color: var(--accent);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .service-card h3 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--primary);
         }
 
@@ -319,7 +317,7 @@
 
         /* Quote Section */
         .quote-section {
-            padding: 60px 4%;
+            padding: 50px 4%;
             background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
@@ -328,33 +326,33 @@
         }
 
         .quote-form-container {
-            max-width: 650px;
-            margin: 30px auto 0 auto;
+            max-width: 600px;
+            margin: 25px auto 0 auto;
             background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
             text-align: left;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: var(--dark);
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 10px 12px;
+            padding: 9px 10px;
             border: 1px solid #cbd5e1;
             border-radius: 6px;
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
             transition: 0.3s;
         }
@@ -367,7 +365,7 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 12px;
         }
 
         @media(max-width: 600px) {
@@ -380,10 +378,10 @@
             background-color: var(--accent);
             color: var(--white);
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: none;
             border-radius: 6px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
             cursor: pointer;
             transition: 0.3s;
@@ -397,11 +395,11 @@
         .about {
             background-color: var(--primary);
             color: var(--white);
-            padding: 60px 4%;
+            padding: 50px 4%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
@@ -411,15 +409,15 @@
         }
 
         .about-text h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .about-text p {
             color: #cbd5e1;
-            margin-bottom: 15px;
-            font-size: 14px;
+            margin-bottom: 12px;
+            font-size: 13px;
         }
 
         .about-image {
@@ -429,50 +427,50 @@
 
         .about-image img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         /* Contact Section */
         .contact {
-            padding: 60px 4%;
+            padding: 50px 4%;
             background-color: var(--light);
             text-align: center;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
             text-align: left;
         }
 
         .contact-card {
             background-color: var(--white);
-            padding: 25px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 12px;
         }
 
         .contact-card i {
-            font-size: 24px;
+            font-size: 22px;
             color: var(--accent);
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .contact-card h4 {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--primary);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .contact-card p, .contact-card a {
             color: var(--gray);
-            font-size: 14px;
+            font-size: 13px;
             transition: 0.3s;
         }
 
@@ -485,9 +483,9 @@
         footer {
             background-color: #071120;
             color: #94a3b8;
-            padding: 25px 4%;
+            padding: 20px 4%;
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -499,27 +497,27 @@
         .menu-toggle {
             display: none;
             cursor: pointer;
-            font-size: 22px;
+            font-size: 20px;
             color: var(--primary);
         }
 
-        /* Mobil Cihazlar İçin Kompakt ve Şık Tasarım Ayarları */
+        /* Mobil Cihazlar İçin Sıkı ve Optimize Görünüm */
         @media(max-width: 768px) {
             .top-bar {
                 font-size: 11px;
-                padding: 6px 3%;
+                padding: 5px 3%;
                 justify-content: center;
                 text-align: center;
             }
             .top-bar-info {
                 justify-content: center;
-                gap: 10px;
+                gap: 8px;
             }
             header {
-                padding: 8px 3%;
+                padding: 6px 3%;
             }
             .logo-img {
-                height: 36px;
+                height: 32px;
             }
             nav ul {
                 display: none;
@@ -529,10 +527,10 @@
                 left: 0;
                 width: 100%;
                 background: var(--white);
-                padding: 15px;
+                padding: 12px;
                 box-shadow: 0 10px 15px rgba(0,0,0,0.1);
                 text-align: center;
-                gap: 15px;
+                gap: 12px;
             }
             nav ul.active {
                 display: flex;
@@ -541,37 +539,41 @@
                 display: block;
             }
             .hero {
-                height: 75vh;
+                height: 65vh;
                 padding: 0 10px;
             }
             .hero h1 {
-                font-size: 26px;
-            }
-            .hero p {
-                font-size: 14px;
-            }
-            .btn-primary, .btn-whatsapp, .btn-secondary {
-                padding: 10px 18px;
-                font-size: 13px;
-            }
-            .stats {
-                margin-top: -30px;
-                width: 95%;
-                padding: 20px 2%;
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .stat-item h3 {
                 font-size: 24px;
             }
+            .hero p {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+            .btn-primary, .btn-whatsapp {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+            .stats {
+                margin-top: -25px;
+                width: 94%;
+                padding: 15px 2%;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+            .stat-item h3 {
+                font-size: 18px;
+            }
+            .stat-item p {
+                font-size: 11px;
+            }
             .services, .quote-section, .about, .contact {
-                padding: 40px 3%;
+                padding: 35px 3%;
             }
             .section-title {
-                font-size: 22px;
+                font-size: 20px;
             }
             .quote-form-container {
-                padding: 20px 15px;
+                padding: 15px 12px;
             }
         }
     </style>
@@ -585,14 +587,14 @@
             <span><i class="fa-solid fa-phone"></i> İbrahim Karalar: <a href="tel:05385142075">0538 514 20 75</a></span>
         </div>
         <div>
-            <span><i class="fa-solid fa-globe"></i> KARALAR Lojistik</span>
+            <span><i class="fa-solid fa-globe"></i> KARARLAR Lojistik</span>
         </div>
     </div>
 
     <!-- Header -->
     <header>
         <a href="#">
-            <img src="logo.png" alt="KARALAR Lojistik Logo" class="logo-img">
+            <img src="logo.png" alt="KARARLAR Lojistik Logo" class="logo-img">
         </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
@@ -609,11 +611,18 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Slider -->
+    <!-- Hero Section with Extended Slider (Arka Planda 9 Resim) -->
     <section class="hero">
         <div class="hero-slider-container">
             <div class="slide active" style="background-image: url('image_0.png');"></div>
             <div class="slide" style="background-image: url('image_1.png');"></div>
+            <div class="slide" style="background-image: url('image_2.png');"></div>
+            <div class="slide" style="background-image: url('image_3.png');"></div>
+            <div class="slide" style="background-image: url('image_4.png');"></div>
+            <div class="slide" style="background-image: url('image_5.png');"></div>
+            <div class="slide" style="background-image: url('image_6.png');"></div>
+            <div class="slide" style="background-image: url('image_7.png');"></div>
+            <div class="slide" style="background-image: url('image_8.png');"></div>
             <div class="hero-overlay"></div>
         </div>
 
@@ -631,11 +640,11 @@
     <div class="stats">
         <div class="stat-item">
             <h3>%100</h3>
-            <p>Müşteri Memnuniyeti</p>
+            <p>Memnuniyet</p>
         </div>
         <div class="stat-item">
             <h3>7/24</h3>
-            <p>Kesintisiz Destek</p>
+            <p>Destek</p>
         </div>
         <div class="stat-item">
             <h3>Güven</h3>
@@ -704,7 +713,7 @@
                 </div>
                 <div class="form-group">
                     <label>Ek Notlar / Yük Detayı</label>
-                    <textarea id="qDetails" rows="3" placeholder="Palet sayısı, ağırlık vb. detaylar..."></textarea>
+                    <textarea id="qDetails" rows="2" placeholder="Palet sayısı, ağırlık vb. detaylar..."></textarea>
                 </div>
                 <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Teklif İsteği Gönder</button>
             </form>
@@ -770,7 +779,7 @@
             navList.classList.toggle('active');
         });
 
-        // Background Slider Logic
+        // Background Slider Logic (9 Resim İçin Güncellendi)
         const slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
 
