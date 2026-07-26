@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CK GLOBAL Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
+    <title>ÖZ KARALAR Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -84,10 +84,15 @@
             padding: 8px 4%;
         }
 
-        .logo-img {
-            height: 38px;
-            width: auto;
-            object-fit: contain;
+        .logo-text {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
         }
 
         nav ul {
@@ -656,6 +661,23 @@
             font-weight: 600;
         }
 
+        .route-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .route-badge {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
         /* Footer */
         footer {
             background-color: #071120;
@@ -762,9 +784,6 @@
             header {
                 padding: 6px 3%;
             }
-            .logo-img {
-                height: 32px;
-            }
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -834,25 +853,25 @@
 <body>
 
     <!-- Sabit Sağ Alt WhatsApp Destek Butonu -->
-    <a href="https://wa.me/905308356007?text=Merhaba,%20nakliye%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="floating-whatsapp" title="WhatsApp Canlı Destek">
+    <a href="https://wa.me/905385142075?text=Merhaba,%20nakliye%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="floating-whatsapp" title="WhatsApp Canlı Destek">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-info">
-            <span><i class="fa-solid fa-phone"></i> Berat Karalar: <a href="tel:05308356007">0530 835 60 07</a></span>
             <span><i class="fa-solid fa-phone"></i> İbrahim Karalar: <a href="tel:05385142075">0538 514 20 75</a></span>
+            <span><i class="fa-solid fa-phone"></i> Berat Karalar: <a href="tel:05308356007">0530 835 60 07</a></span>
         </div>
         <div>
-            <span><i class="fa-solid fa-globe"></i> CK GLOBAL Lojistik</span>
+            <span><i class="fa-solid fa-globe"></i> ÖZ KARALAR Lojistik</span>
         </div>
     </div>
 
     <!-- Header -->
     <header>
         <a href="#">
-            <img src="logo.png" alt="CK GLOBAL Lojistik Logo" class="logo-img">
+            <div class="logo-text">ÖZ <span>KARALAR</span></div>
         </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
@@ -866,7 +885,7 @@
                 <li><a href="#yorumlar">Referanslar</a></li>
                 <li><a href="#sss">S.S.S.</a></li>
                 <li><a href="#teklif">Teklif Al</a></li>
-                <li><a href="tel:05308356007" class="btn-quote">Hemen Teklif Al</a></li>
+                <li><a href="tel:05385142075" class="btn-quote">Hemen Teklif Al</a></li>
             </ul>
         </nav>
     </header>
@@ -887,11 +906,11 @@
         </div>
 
         <div class="hero-content">
-            <h1>Güvenli Taşımacılıkta <span>Küresel Gücünüz</span></h1>
-            <p>CK GLOBAL Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
+            <h1>Güvenli Taşımacılıkta <span>ÖZ KARALAR Gücü</span></h1>
+            <p>ÖZ KARALAR Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
             <div class="hero-buttons">
-                <a href="tel:05308356007" class="btn-primary"><i class="fa-solid fa-phone"></i> Berat Karalar'ı Ara</a>
-                <a href="https://wa.me/905308356007" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Teklif</a>
+                <a href="tel:05385142075" class="btn-primary"><i class="fa-solid fa-phone"></i> İbrahim Karalar'ı Ara</a>
+                <a href="https://wa.me/905385142075" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Teklif</a>
             </div>
         </div>
     </section>
@@ -969,16 +988,17 @@
                     <select id="calcFrom">
                         <option value="Gaziantep">Gaziantep</option>
                         <option value="İstanbul">İstanbul</option>
-                        <option value="Ankara">Ankara</option>
-                        <option value="Mersin">Mersin</option>
+                        <option value="Bursa">Bursa</option>
+                        <option value="İzmir">İzmir</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label style="color: white;">Varış Noktası</label>
                     <select id="calcTo">
                         <option value="İstanbul">İstanbul</option>
-                        <option value="Ankara">Ankara</option>
+                        <option value="Bursa">Bursa</option>
                         <option value="İzmir">İzmir</option>
+                        <option value="Gaziantep">Gaziantep</option>
                         <option value="Avrupa/Global">Avrupa / Global</option>
                     </select>
                 </div>
@@ -996,7 +1016,7 @@
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <i class="fa-solid fa-quote-left"></i>
-                <p>"CK Global Lojistik ile uzun süredir çalışıyoruz. Yüklerimiz her zaman zamanında ve eksiksiz teslim ediliyor. Berat Bey ve ekibine teşekkürler."</p>
+                <p>"Öz Karalar Lojistik ile uzun süredir çalışıyoruz. Yüklerimiz her zaman zamanında ve eksiksiz teslim ediliyor. İbrahim Bey ve ekibine teşekkürler."</p>
                 <div class="client-info">
                     <h4>Ahmet Yılmaz</h4>
                     <span>Tekstil Fabrikası Yöneticisi</span>
@@ -1024,12 +1044,12 @@
                 <div class="faq-answer">Evet, tüm taşımacılık operasyonlarımızda yükleriniz sigorta güvencesi altındadır.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Ödeme koşulları ve seçenekleri nelerdir? <p></p><i class="fa-solid fa-chevron-down"></i></button>
+                <button class="faq-question">Ödeme koşulları ve seçenekleri nelerdir? <i class="fa-solid fa-chevron-down"></i></button>
                 <div class="faq-answer">Esnek ödeme koşulları sunuyoruz. Havale, EFT veya operasyon bazlı anlaşmalı ödeme yöntemleri mevcuttur.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Hangi bölgelere hizmet veriyorsunuz? <i class="fa-solid fa-chevron-down"></i></button>
-                <div class="faq-answer">Türkiye geneli tüm şehirlere ve uluslararası güzergahlarda komple ve parsiyel taşımacılık hizmeti sunmaktayız.</div>
+                <div class="faq-answer">Gaziantep merkezli olmak üzere İstanbul, Bursa, İzmir ve Türkiye geneli tüm şehirlere taşımacılık hizmeti sunmaktayız.</div>
             </div>
         </div>
     </section>
@@ -1082,8 +1102,8 @@
     <section class="about" id="kurumsal">
         <div class="about-text">
             <h2>Kusursuz Lojistik, Güçlü Altyapı</h2>
-            <p><strong>CK GLOBAL Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
-            <p>Berat Karalar ve İbrahim Karalar liderliğinde, lojistik süreçlerinizde her zaman yanınızdayız.</p>
+            <p><strong>ÖZ KARALAR Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
+            <p>İbrahim Karalar ve Berat Karalar liderliğinde, lojistik süreçlerinizde her zaman yanınızdayız.</p>
         </div>
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Lojistik Filosu">
@@ -1099,25 +1119,30 @@
             <div class="contact-card">
                 <i class="fa-solid fa-user-tie"></i>
                 <div>
-                    <h4>Berat Karalar</h4>
-                    <p>Yönetici / Operasyon</p>
-                    <a href="tel:05308356007">0530 835 60 07</a>
-                </div>
-            </div>
-            <div class="contact-card">
-                <i class="fa-solid fa-user-tie"></i>
-                <div>
                     <h4>İbrahim Karalar</h4>
                     <p>Yönetici / Operasyon</p>
                     <a href="tel:05385142075">0538 514 20 75</a>
                 </div>
             </div>
             <div class="contact-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h4>Berat Karalar</h4>
+                    <p>Yönetici / Operasyon</p>
+                    <a href="tel:05308356007">0530 835 60 07</a>
+                </div>
+            </div>
+            <div class="contact-card">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <div>
-                    <h4>Merkez Ofis</h4>
-                    <p>Türkiye / Global Lojistik Merkezi</p>
-                    <a href="#">Haritada Gör</a>
+                    <h4>Ana Merkez & Güzergahlar</h4>
+                    <p>Gaziantep Merkezli Ana Şube</p>
+                    <div class="route-badges">
+                        <span class="route-badge">Gaziantep</span>
+                        <span class="route-badge">İstanbul</span>
+                        <span class="route-badge">Bursa</span>
+                        <span class="route-badge">İzmir</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1125,20 +1150,20 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <span>CK GLOBAL Lojistik</span>. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <span>ÖZ KARALAR Lojistik</span>. Tüm hakları saklıdır.</p>
     </footer>
 
     <!-- Mobil Sabit Alt Erişim Çubuğu -->
     <div class="mobile-bottom-bar">
-        <a href="tel:05308356007">
-            <i class="fa-solid fa-phone-volume"></i>
-            Berat Karalar
-        </a>
         <a href="tel:05385142075">
             <i class="fa-solid fa-phone"></i>
             İbrahim Karalar
         </a>
-        <a href="https://wa.me/905308356007" target="_blank" class="wa-btn">
+        <a href="tel:05308356007">
+            <i class="fa-solid fa-phone-volume"></i>
+            Berat Karalar
+        </a>
+        <a href="https://wa.me/905385142075" target="_blank" class="wa-btn">
             <i class="fa-brands fa-whatsapp"></i>
             WhatsApp
         </a>
@@ -1198,9 +1223,10 @@
             if(to === "Avrupa/Global") time = "3-5 İş Günü";
             else if(from === "Gaziantep" && to === "İstanbul") time = "1 Gün (Ort. 16-18 Saat)";
             else if(from === "Gaziantep" && to === "İzmir") time = "1-2 Gün";
+            else if(from === "Gaziantep" && to === "Bursa") time = "1-2 Gün";
 
             resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `<strong>Rota:</strong> ${from} ➔ ${to}<br><strong>Tahmini Sevkiyat Süresi:</strong> ${time}<br><span style="font-size:12px; opacity:0.9;">Kesin fiyat ve detaylar için hemen teklif alabilirsiniz.</span>`;
+            resultDiv.innerHTML = `<strong>Rota (${from} ➔ ${to}):</strong><br>Tahmini Sevkiyat Süresi: <span style="color:var(--accent); font-weight:700;">${time}</span><br><span style="font-size:12px; opacity:0.9;">Gaziantep, İstanbul, Bursa ve İzmir hatlarında aktif sevkiyat sürmektedir.</span>`;
         }
 
         // Quote Form WhatsApp Integration
@@ -1215,7 +1241,7 @@
 
             const text = `Merhaba, teklif almak istiyorum.%0A*Ad/Firma:* ${name}%0A*Telefon:* ${phone}%0A*Nereden:* ${from}%0A*Nereye:* ${to}%0A*Hizmet:* ${service}%0A*Notlar:* ${details}`;
             
-            window.open(`https://wa.me/905308356007?text=${text}`, '_blank');
+            window.open(`https://wa.me/905385142075?text=${text}`, '_blank');
         }
     </script>
 </body>
