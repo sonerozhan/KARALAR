@@ -79,22 +79,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 12px 5%;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo span {
-            color: var(--accent);
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
         }
 
         nav ul {
@@ -475,10 +466,9 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">
-            KARLAR
-            <span>Uluslararası Lojistik</span>
-        </div>
+        <a href="#">
+            <img src="logo.png" alt="CK Global Logo" class="logo-img">
+        </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -620,7 +610,7 @@
             slides[currentSlide].classList.add('active');
         }
 
-        setInterval(nextSlide, 4000); // Her 4 saniyede bir resim değiştirir
+        setInterval(nextSlide, 4000);
     </script>
 </body>
 </html>
