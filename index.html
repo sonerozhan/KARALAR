@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Öz Karalar & CK Global | Uluslararası Lojistik ve Taşımacılık</title>
-    <!-- Google Fonts & FontAwesome -->
+    <title>KARLAR Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
             --primary: #0A192F;
-            --accent: #F97316; /* Dikkat çekici turuncu */
+            --accent: #F97316;
             --accent-hover: #EA580C;
             --light: #F8FAFC;
             --dark: #1E293B;
@@ -84,7 +83,7 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 800;
             color: var(--primary);
             display: flex;
@@ -93,8 +92,8 @@
 
         .logo span {
             color: var(--accent);
-            font-size: 12px;
-            letter-spacing: 2px;
+            font-size: 11px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
@@ -127,9 +126,8 @@
             background-color: var(--accent-hover);
         }
 
-        /* Hero Section */
+        /* Hero Slider Section */
         .hero {
-            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             height: 85vh;
             display: flex;
             align-items: center;
@@ -137,10 +135,48 @@
             text-align: center;
             color: var(--white);
             padding: 0 20px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero-content max-width {
-            max-width: 800px;
+        .hero-slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75));
+            z-index: -1;
+        }
+
+        .hero-content {
+            z-index: 1;
         }
 
         .hero h1 {
@@ -158,6 +194,9 @@
             font-size: 18px;
             margin-bottom: 30px;
             color: #cbd5e1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
@@ -197,7 +236,7 @@
             color: var(--primary);
         }
 
-        /* Features / Stats */
+        /* Stats */
         .stats {
             background-color: var(--white);
             padding: 40px 5%;
@@ -286,7 +325,7 @@
             font-size: 14px;
         }
 
-        /* About Brands */
+        /* About Section */
         .about {
             background-color: var(--primary);
             color: var(--white);
@@ -313,20 +352,6 @@
             color: #cbd5e1;
             margin-bottom: 20px;
             font-size: 15px;
-        }
-
-        .brand-badges {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .brand-badge {
-            background: rgba(255,255,255,0.1);
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 700;
-            border-left: 3px solid var(--accent);
         }
 
         .about-image {
@@ -403,7 +428,6 @@
             font-weight: 600;
         }
 
-        /* Responsive Navbar Menu Toggle for Mobile */
         .menu-toggle {
             display: none;
             cursor: pointer;
@@ -445,15 +469,15 @@
             <span><i class="fa-solid fa-phone"></i> İbrahim Karalar: <a href="tel:05385142075">0538 514 20 75</a></span>
         </div>
         <div>
-            <span><i class="fa-solid fa-globe"></i> Öz Karalar & CK Global Lojistik</span>
+            <span><i class="fa-solid fa-globe"></i> KARLAR Lojistik</span>
         </div>
     </div>
 
     <!-- Header -->
     <header>
         <div class="logo">
-            ÖZ KARALAR & CK GLOBAL
-            <span>Uluslararası Lojistik Ağı</span>
+            KARLAR
+            <span>Uluslararası Lojistik</span>
         </div>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
@@ -469,11 +493,17 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slider -->
     <section class="hero">
+        <div class="hero-slider-container">
+            <div class="slide active" style="background-image: url('image_0.png');"></div>
+            <div class="slide" style="background-image: url('image_1.png');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+
         <div class="hero-content">
             <h1>Güvenli Taşımacılıkta <span>Küresel Gücünüz</span></h1>
-            <p>Öz Karalar ve CK Global güçlerini birleştirdi. Yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
+            <p>KARLAR Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
             <div class="hero-buttons">
                 <a href="tel:05318356007" class="btn-primary"><i class="fa-solid fa-phone"></i> Berat Karalar'ı Ara</a>
                 <a href="tel:05385142075" class="btn-secondary"><i class="fa-solid fa-phone"></i> İbrahim Karalar'ı Ara</a>
@@ -521,17 +551,12 @@
         </div>
     </section>
 
-    <!-- About / Brands Section -->
+    <!-- About Section -->
     <section class="about" id="kurumsal">
         <div class="about-text">
-            <h2>İki Güçlü Marka, Tek Hedef: Kusursuz Hizmet</h2>
-            <p><strong>Öz Karalar</strong> ve <strong>CK Global</strong> ortaklığıyla lojistik sektöründe standartları yeniden belirliyoruz. Yılların getirdiği sektör tecrübemiz ve güçlü yönetim kadromuzla operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
-            <p>Berat Karalar ve İbrahim Karalar liderliğinde, iş süreçlerinizde her zaman yanınızdayız.</p>
-            
-            <div class="brand-badges">
-                <div class="brand-badge">Öz Karalar Lojistik</div>
-                <div class="brand-badge">CK Global</div>
-            </div>
+            <h2>Kusursuz Lojistik, Güçlü Altyapı</h2>
+            <p><strong>KARLAR Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
+            <p>Berat Karalar ve İbrahim Karalar liderliğinde, lojistik süreçlerinizde her zaman yanınızdayız.</p>
         </div>
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Lojistik Filosu">
@@ -573,10 +598,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <span>Öz Karalar & CK Global Lojistik</span>. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <span>KARLAR Lojistik</span>. Tüm hakları saklıdır.</p>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript for Mobile Menu and Background Slider -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
@@ -584,6 +609,18 @@
         mobileMenu.addEventListener('click', () => {
             navList.classList.toggle('active');
         });
+
+        // Background Slider Logic
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 4000); // Her 4 saniyede bir resim değiştirir
     </script>
 </body>
 </html>
