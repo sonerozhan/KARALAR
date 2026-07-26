@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÖZ KARALAR Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
+    <title>ÖZ KARALAR & CK GLOBAL Lojistik | Uluslararası Taşımacılık</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -85,14 +85,22 @@
         }
 
         .logo-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--primary);
             letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
         .logo-text span {
             color: var(--accent);
+        }
+
+        .logo-subtitle {
+            font-size: 10px;
+            color: var(--gray);
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         nav ul {
@@ -683,7 +691,11 @@
             background-color: #071120;
             color: #94a3b8;
             padding: 20px 4%;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             font-size: 12px;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -691,6 +703,22 @@
         footer span {
             color: var(--white);
             font-weight: 600;
+        }
+
+        .footer-brands {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .footer-brands .brand-names {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 13px;
+        }
+
+        .footer-brands .brand-names span {
+            color: var(--accent);
         }
 
         .menu-toggle {
@@ -847,6 +875,13 @@
                 height: 44px;
                 font-size: 22px;
             }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-brands {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -864,14 +899,15 @@
             <span><i class="fa-solid fa-phone"></i> Berat Karalar: <a href="tel:05308356007">0530 835 60 07</a></span>
         </div>
         <div>
-            <span><i class="fa-solid fa-globe"></i> ÖZ KARALAR Lojistik</span>
+            <span><i class="fa-solid fa-globe"></i> ÖZ KARALAR & CK GLOBAL</span>
         </div>
     </div>
 
     <!-- Header -->
     <header>
         <a href="#">
-            <div class="logo-text">ÖZ <span>KARALAR</span></div>
+            <div class="logo-text">ÖZ KARALAR <span>&</span> CK GLOBAL</div>
+            <div class="logo-subtitle">Kardeş Kuruluş / Lojistik</div>
         </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fa-solid fa-bars"></i>
@@ -890,7 +926,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Extended Slider (Arka Planda 9 Resim) -->
+    <!-- Hero Section with Extended Slider -->
     <section class="hero">
         <div class="hero-slider-container">
             <div class="slide active" style="background-image: url('image_0.png');"></div>
@@ -906,8 +942,8 @@
         </div>
 
         <div class="hero-content">
-            <h1>Güvenli Taşımacılıkta <span>ÖZ KARALAR Gücü</span></h1>
-            <p>ÖZ KARALAR Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
+            <h1>Güvenli Taşımacılıkta <span>ÖZ KARALAR & CK GLOBAL</span> Gücü</h1>
+            <p>ÖZ KARALAR ve CK GLOBAL kardeş firmalarımızla, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
             <div class="hero-buttons">
                 <a href="tel:05385142075" class="btn-primary"><i class="fa-solid fa-phone"></i> İbrahim Karalar'ı Ara</a>
                 <a href="https://wa.me/905385142075" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Teklif</a>
@@ -1016,7 +1052,7 @@
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <i class="fa-solid fa-quote-left"></i>
-                <p>"Öz Karalar Lojistik ile uzun süredir çalışıyoruz. Yüklerimiz her zaman zamanında ve eksiksiz teslim ediliyor. İbrahim Bey ve ekibine teşekkürler."</p>
+                <p>"Öz Karalar ve CK GLOBAL lojistik ile uzun süredir çalışıyoruz. Yüklerimiz her zaman zamanında teslim ediliyor. İbrahim Bey ve ekibine teşekkürler."</p>
                 <div class="client-info">
                     <h4>Ahmet Yılmaz</h4>
                     <span>Tekstil Fabrikası Yöneticisi</span>
@@ -1102,8 +1138,8 @@
     <section class="about" id="kurumsal">
         <div class="about-text">
             <h2>Kusursuz Lojistik, Güçlü Altyapı</h2>
-            <p><strong>ÖZ KARALAR Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
-            <p>İbrahim Karalar ve Berat Karalar liderliğinde, lojistik süreçlerinizde her zaman yanınızdayız.</p>
+            <p><strong>ÖZ KARALAR & CK GLOBAL</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
+            <p>İbrahim Karalar ve Berat Karalar liderliğinde, kardeş firmalarımızın gücüyle lojistik süreçlerinizde her zaman yanınızdayız.</p>
         </div>
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Lojistik Filosu">
@@ -1150,7 +1186,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <span>ÖZ KARALAR Lojistik</span>. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <span>ÖZ KARALAR & CK GLOBAL</span>. Tüm hakları saklıdır.</p>
+        <div class="footer-brands">
+            <div class="brand-names">ÖZ KARALAR & CK GLOBAL</div>
+            <span style="color: #94a3b8; font-size: 11px;">Kardeş Firma</span>
+        </div>
     </footer>
 
     <!-- Mobil Sabit Alt Erişim Çubuğu -->
