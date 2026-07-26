@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARLAR Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
+    <title>KARARLAR Lojistik | Uluslararası Taşımacılık ve Güvenli Lojistik</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -227,6 +227,23 @@
             color: var(--primary);
         }
 
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+
         /* Stats */
         .stats {
             background-color: var(--white);
@@ -314,6 +331,82 @@
         .service-card p {
             color: var(--gray);
             font-size: 14px;
+        }
+
+        /* Quote Section (Teklif Al Formu) */
+        .quote-section {
+            padding: 80px 5%;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .quote-form-container {
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media(max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn-submit {
+            background-color: var(--accent);
+            color: var(--white);
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-hover);
         }
 
         /* About Section */
@@ -460,7 +553,7 @@
             <span><i class="fa-solid fa-phone"></i> İbrahim Karalar: <a href="tel:05385142075">0538 514 20 75</a></span>
         </div>
         <div>
-            <span><i class="fa-solid fa-globe"></i> KARLAR Lojistik</span>
+            <span><i class="fa-solid fa-globe"></i> KARARLAR Lojistik</span>
         </div>
     </div>
 
@@ -476,6 +569,7 @@
             <ul id="nav-list">
                 <li><a href="#">Ana Sayfa</a></li>
                 <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                <li><a href="#teklif">Teklif Al</a></li>
                 <li><a href="#kurumsal">Kurumsal</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
                 <li><a href="tel:05318356007" class="btn-quote">Hemen Teklif Al</a></li>
@@ -493,10 +587,10 @@
 
         <div class="hero-content">
             <h1>Güvenli Taşımacılıkta <span>Küresel Gücünüz</span></h1>
-            <p>KARLAR Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
+            <p>KARARLAR Lojistik olarak, yüklerinizi zamanında, güvenle ve profesyonel çözümlerle dilediğiniz noktaya ulaştırıyoruz.</p>
             <div class="hero-buttons">
                 <a href="tel:05318356007" class="btn-primary"><i class="fa-solid fa-phone"></i> Berat Karalar'ı Ara</a>
-                <a href="tel:05385142075" class="btn-secondary"><i class="fa-solid fa-phone"></i> İbrahim Karalar'ı Ara</a>
+                <a href="https://wa.me/905318356007" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Teklif</a>
             </div>
         </div>
     </section>
@@ -541,11 +635,55 @@
         </div>
     </section>
 
+    <!-- Interactive Quote Form Section -->
+    <section class="quote-section" id="teklif">
+        <h2 class="section-title" style="color: white;">Hemen Nakliye Teklifi Alın</h2>
+        <p class="section-desc" style="color: #cbd5e1;">Yükünüzün detaylarını doldurun, en kısa sürede size dönüş yapalım.</p>
+        
+        <div class="quote-form-container">
+            <form onsubmit="sendQuote(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Adınız Soyadınız / Firma</label>
+                        <input type="text" id="qName" required placeholder="Adınız Soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon Numarası</label>
+                        <input type="tel" id="qPhone" required placeholder="05XX XXX XX XX">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Neredden (Yükleme Yeri)</label>
+                        <input type="text" id="qFrom" required placeholder="Örn: Gaziantep">
+                    </div>
+                    <div class="form-group">
+                        <label>Nereye (Teslimat Yeri)</label>
+                        <input type="text" id="qTo" required placeholder="Örn: İstanbul">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Taşıma Türü / Yük Detayı</label>
+                    <select id="qService">
+                        <option value="Karayolu Komple Taşımacılık">Karayolu Komple Taşımacılık</option>
+                        <option value="Parsiyel Taşımacılık">Parsiyel Taşımacılık</option>
+                        <option value="Depolama & Antrepo">Depolama & Antrepo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ek Notlar / Yük Detayı</label>
+                    <textarea id="qDetails" rows="3" placeholder="Palet sayısı, ağırlık vb. detaylar..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Teklif İsteği Gönder</button>
+            </form>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="kurumsal">
         <div class="about-text">
             <h2>Kusursuz Lojistik, Güçlü Altyapı</h2>
-            <p><strong>KARLAR Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
+            <p><strong>KARARLAR Lojistik</strong> olarak sektörün getirdiği tecrübe ve dinamizmle operasyonlarınızı en yüksek kalitede yönetiyoruz.</p>
             <p>Berat Karalar ve İbrahim Karalar liderliğinde, lojistik süreçlerinizde her zaman yanınızdayız.</p>
         </div>
         <div class="about-image">
@@ -588,10 +726,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 <span>KARLAR Lojistik</span>. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <span>KARARLAR Lojistik</span>. Tüm hakları saklıdır.</p>
     </footer>
 
-    <!-- JavaScript for Mobile Menu and Background Slider -->
+    <!-- JavaScript for Mobile Menu, Slider and Quote Form -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
@@ -611,6 +749,21 @@
         }
 
         setInterval(nextSlide, 4000);
+
+        // Quote Form WhatsApp Integration
+        function sendQuote(e) {
+            e.preventDefault();
+            const name = document.getElementById('qName').value;
+            const phone = document.getElementById('qPhone').value;
+            const from = document.getElementById('qFrom').value;
+            const to = document.getElementById('qTo').value;
+            const service = document.getElementById('qService').value;
+            const details = document.getElementById('qDetails').value;
+
+            const text = `Merhaba, teklif almak istiyorum.%0A*Ad/Firma:* ${name}%0A*Telefon:* ${phone}%0A*Nereden:* ${from}%0A*Nereye:* ${to}%0A*Hizmet:* ${service}%0A*Notlar:* ${details}`;
+            
+            window.open(`https://wa.me/905318356007?text=${text}`, '_blank');
+        }
     </script>
 </body>
 </html>
